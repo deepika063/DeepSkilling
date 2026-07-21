@@ -1,0 +1,17 @@
+courses = [
+  { id: 1, name: 'Angular', code: 'ANG101', credits: 4, gradeStatus: 'passed' },
+  { id: 2, name: 'Java', code: 'JAVA101', credits: 3, gradeStatus: 'pending' },
+  { id: 3, name: 'SQL', code: 'SQL101', credits: 2, gradeStatus: 'failed' }
+];
+
+isLoading = true;
+
+ngOnInit() {
+  setTimeout(() => {
+    this.isLoading = false;
+  }, 1500);
+}
+
+trackByCourseId(index: number, course: any) {
+  return course.id;
+}
